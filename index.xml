@@ -12,7 +12,7 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Wed, 15 Mar 2023 11:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 15 Aug 2024 11:00:00 -0700</lastBuildDate>
     
     
     <atom:link href="https://tonyma6324.github.io/tonyma.github.io/index.xml" rel="self" type="application/rss&#43;xml" />
@@ -22,17 +22,64 @@
     
 
     <item>
-      <title>Hello World</title>
-      <link>https://tonyma6324.github.io/tonyma.github.io/post/hello/</link>
-      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <title>常用arm汇编</title>
+      <link>https://tonyma6324.github.io/tonyma.github.io/post/huibian/</link>
+      <pubDate>Thu, 15 Aug 2024 11:00:00 -0700</pubDate>
       <author>1007013360@qq.com (Tonyma)</author>
-      <guid>https://tonyma6324.github.io/tonyma.github.io/post/hello/</guid>
+      <guid>https://tonyma6324.github.io/tonyma.github.io/post/huibian/</guid>
       <description>
-        <![CDATA[<h1>Hello World</h1><p>作者：Tonyma（1007013360@qq.com）</p>
+        <![CDATA[<h1>常用arm汇编</h1><p>作者：Tonyma（1007013360@qq.com）</p>
         
-          <p>💘 博麗 霊夢 💘</p>
+          <p>1.mov	r0, r5         即move 把r5寄存器中的值复制到r0
+2.add	r2, r3, #31    即add r3加上立即数31存到r2
+3.sub	sp, sp, #36	;   sp-立即数36 存到sp
+4.push	{r4, r5, r6, r7, r8, r9, sl, fp, lr}  push即压栈，把以下寄存器值压入堆栈
+5.ldr	r1, [pc, #1248]  即load   pc地址+立即数1248地址数据存到r1
+6.str	r1, [sp, #16]    即store  把r1值存到 sp+立即数16处 与ldr相反，还有变种比如strne，即store not empty 地址非空才str，ldrne同理
+这里解释下[]是为了取地址，arm架构中的内存地址到cpu移动只能由l/s来操作，mov和ldr的区别也就在此，mov通常是用于寄存器间传递数据或者读立即数，而ldr是从内存中读取
+7.bic	r3, r3, #8128	;  即bit clear  立即数8128一般为掩码，第一个参数为dest 即把r3与8128按位清0 然后存到r3
+8.cmp	r3, #0           即compare 比较r3值与立即数0 (实际是减法) 一般用于条件或循环控制，会根据结果设置CCR,即条件码寄存器。注在CPSR寄存器中
+9.movge	r2, r3         即mov greater or equal 只有r3值大于r2时 才会r3值移到r2
+10.and	r3, r3, #31    即bit and  把r3中的值和立即数31(十六进制)按位与 ，然后把结果存到r3
+11.asr	r2, r2, #5     即算术shift right 把r2中的值右移五位，在存到r2 ，asl同理
+12.lsr	r3, r2, r3     即逻辑Logic shift right 把r2的值逻辑右移r3中位数，然后放到r3中，lsl同理
+13.tst	r3, #1         即test  把r3与1按位与，但不保存结果，只根据结果设置CCR
+14.beq	2d50 &lt;rcu_process_callbacks+0x4e8&gt; 即branch if equal 如果相等则跳转到地址 2d50 这里，这里编译器帮忙指出了实际函数偏移，这个指令实际依赖CCR的条件寄存器的值，比如tst的结果，或者是cmp的结果
+同理bnq就是 branch if not equal
+15.movw	r1, #2835     即 move word 把2835的低16位移到r1里
+16.ldrb	r3, [r4, #14]  即load byte 只加载[r4+14]地址的一个字节的数据到r3寄存器中
+17.bl	2014 &lt;note_gp_changes&gt; 即branch and link 在跳转的前会将返回地址,也就是当前的pc值存到lr中，然后在跳转，相应的b 2014 则是无条件直接跳转
+18.clz	r2, r2         即count leading zero 计算前导0的数量，也就是计算r2中最高位到第一个不是0的位数，然后存到r2中
+19.mrc	15, 0, r4, cr13, cr0, {4}
+这段代码是 ARM 架构汇编中的一条指令。它是 MRC（Move to Register from Coprocessor）指令的一种形式，用于从协处理器中将数据移动到通用寄存器中（仅了解）
+具体来说：
+15 表示协处理器编号，对于 ARM 处理器，通常用于访问 CP15，即系统控制寄存器。
+0 是操作码，表示一个特定的功能。
+r4 是目标寄存器，即数据将被移动到的寄存器。
+cr13 表示协处理器寄存器的扩展名称。
+cr0 是协处理器寄存器组的索引。
+{4} 是可选的操作数列表，这里表示从协处理器中读取的数据应该写入目标寄存器 r4 中的第 4 个字。
+这条指令的具体含义和操作是依赖于具体的处理器和上下文的，因为不同的 ARM 处理器和操作系统可能会使用不同的寄存器和功能。</p>
         
-        <hr><p>本文2023-03-15首发于<a href='https://tonyma6324.github.io/tonyma.github.io/'>Tonyma Blog</a>，最后修改于2023-03-15</p>]]>
+        <hr><p>本文2024-08-15首发于<a href='https://tonyma6324.github.io/tonyma.github.io/'>Tonyma Blog</a>，最后修改于2024-08-15</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>我的栈为什么又溢出了</title>
+      <link>https://tonyma6324.github.io/tonyma.github.io/post/stack/</link>
+      <pubDate>Sun, 15 Aug 2021 11:00:00 -0700</pubDate>
+      <author>1007013360@qq.com (Tonyma)</author>
+      <guid>https://tonyma6324.github.io/tonyma.github.io/post/stack/</guid>
+      <description>
+        <![CDATA[<h1>我的栈为什么又溢出了</h1><p>作者：Tonyma（1007013360@qq.com）</p>
+        
+          <p>在正常的编程中，我们经常遇见栈溢出的情况（因为你从来不检查长度），发明编译器的人也大概猜到你小子会把程序折腾成什么样，分配给栈的内存空间已经足够的大，一般难以溢出。但总有意外的情况出现，比如你疯狂的进行递归调用，在函数里定义了一大堆变量，而且这些变量还贼大。你哐哐一堆猛敲，栈苦不堪言。</p>
+        
+        <hr><p>本文2021-08-15首发于<a href='https://tonyma6324.github.io/tonyma.github.io/'>Tonyma Blog</a>，最后修改于2021-08-15</p>]]>
       </description>
       
     </item>

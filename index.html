@@ -149,7 +149,7 @@
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>文章</div><div class="sidebar-state-number">1</div>
+    <div>文章</div><div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
@@ -207,7 +207,9 @@
       <h3 class="widget-title">最新文章</h3>
       <div class="widget">
         <ul><li>
-              <a href="/tonyma.github.io/post/hello/">Hello World</a>
+              <a href="/tonyma.github.io/post/huibian/">常用arm汇编</a>
+            </li><li>
+              <a href="/tonyma.github.io/post/stack/">我的栈为什么又溢出了</a>
             </li></ul>
       </div>
     </div>
@@ -220,8 +222,8 @@
     data-aos="fade-up"
   ><a
         class="post-link"
-        href="/tonyma.github.io/post/hello/"
-        aria-label="Hello World"
+        href="/tonyma.github.io/post/huibian/"
+        aria-label="常用arm汇编"
       >
       </a><div
       class="
@@ -230,26 +232,67 @@
     ><img
             data-src="https://d-sketon.top/img/_backwebp/bg1.webp"
             data-sizes="auto"
-            alt="Hello World"
+            alt="常用arm汇编"
             class="lazyload"
           /></div>
     <div class="post-info">
       <div class="post-meta">
         <span
           ><span class="icon-calendar"></span
-          >2023-03-15</span
+          >2024-08-15</span
         >
         <span
           ><span class="icon-pencil"></span
-          >6 字</span
+          >1126 字</span
         >
         <span
           ><span class="icon-clock"></span
-          >1 分钟</span
+          >3 分钟</span
         >
       </div>
-      <h2 class="post-title">Hello World</h2>
-      <article class="post-article">💘 博麗 霊夢 💘
+      <h2 class="post-title">常用arm汇编</h2>
+      <article class="post-article">1.mov	r0, r5 即move 把r5寄存器中的值复制到r0 2.add	r2, r3, #31 即add r3加上立即数31存到r2 3.sub	sp, sp, #36	; sp-立即数36 存到sp 4.push	{r4, r5, r6, r7, r8, r9, sl, fp, lr} push即压栈，把以下寄存器值压入堆栈 5.ldr	r1, [pc, #1248] 即load pc地址+立即数1248地址数据存到r1 6.str	r1, [sp, #16] 即store 把r1值存到 sp+立即数16处 与ldr相反，还有变种比如strne，即store not empty 地址 …</article>
+    </div>
+  </div>
+</div>
+<div class="post-wrapper">
+  <div
+    class="
+      post-wrap-right
+    "
+    data-aos="fade-up"
+  ><a
+        class="post-link"
+        href="/tonyma.github.io/post/stack/"
+        aria-label="我的栈为什么又溢出了"
+      >
+      </a><div
+      class="
+        post-cover-right
+      "
+    ><img
+            data-src="https://d-sketon.top/img/_backwebp/bg1.webp"
+            data-sizes="auto"
+            alt="我的栈为什么又溢出了"
+            class="lazyload"
+          /></div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span
+          ><span class="icon-calendar"></span
+          >2021-08-15</span
+        >
+        <span
+          ><span class="icon-pencil"></span
+          >2962 字</span
+        >
+        <span
+          ><span class="icon-clock"></span
+          >6 分钟</span
+        >
+      </div>
+      <h2 class="post-title">我的栈为什么又溢出了</h2>
+      <article class="post-article">在正常的编程中，我们经常遇见栈溢出的情况（因为你从来不检查长度），发明编译器的人也大概猜到你小子会把程序折腾成什么样，分配给栈的内存空间已经足够的大，一般难以溢出。但总有意外的情况出现，比如你疯狂的进行递归调用，在函数里定义了一大堆变量，而且这些变量还贼大。你哐哐一堆猛敲，栈苦不堪言。
 </article>
     </div>
   </div>
@@ -275,10 +318,10 @@
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;6</span
+          >&nbsp;4.1k</span
         >
         &nbsp;|&nbsp;
-        <span class="icon-coffee">&nbsp;00:01</span>
+        <span class="icon-coffee">&nbsp;00:09</span>
       </div><div>
         <span class="icon-eye"></span>
         <span id="busuanzi_container_site_pv"
@@ -312,7 +355,7 @@
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>文章</div><div class="sidebar-state-number">1</div>
+    <div>文章</div><div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>

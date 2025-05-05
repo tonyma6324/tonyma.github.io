@@ -8,7 +8,7 @@
   name="viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit=no"
 /><title>
-  目录 | Tonyma
+  常用arm汇编 | Tonyma
 </title>
 <meta
   name="description"
@@ -37,12 +37,12 @@
     crossorigin="anonymous"
   /><link rel="stylesheet" href="/tonyma.github.io/css/loader.min.ac746e154f756f8220326eeb52a719f142ab038be5a8ddf30ea5ef15ef2356ea.css" />
 <meta property="og:type" content="website" />
-  <meta property="og:title" content="目录 | Tonyma" />
+  <meta property="og:title" content="常用arm汇编 | Tonyma" />
   <meta
     property="og:description"
     content="喜剧的内核是linux"
   />
-  <meta property="og:url" content="https://tonyma6324.github.io/tonyma.github.io/categories/" />
+  <meta property="og:url" content="https://tonyma6324.github.io/tonyma.github.io/post/huibian/" />
   <meta
     property="og:site_name"
     content="Tonyma Blog"
@@ -52,9 +52,9 @@
     content="/tonyma.github.io/"
   />
   <meta property="article:author" content="Tonyma" />
-  <meta property="article:published_time" content="0001-01-01T00:00:00&#43;00:00" />
-  <meta property="article:modified_time" content="0001-01-01T00:00:00&#43;00:00" /><meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="/tonyma.github.io/" /><link rel="alternate" type="application/rss+xml" href="https://tonyma6324.github.io/tonyma.github.io/categories/index.xml" title="Tonyma Blog">
+  <meta property="article:published_time" content="2024-08-15T11:00:00-07:00" />
+  <meta property="article:modified_time" content="2024-08-15T11:00:00-07:00" /><meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="/tonyma.github.io/" />
 <link rel="shortcut icon" href="/tonyma.github.io/favicon.ico"><link rel="stylesheet" href="/tonyma.github.io/css/main.min.b878af8b4eae923e83d50a1963def8f7f00c8f77232d652fb5335647f8ea77e6.css" />
 <link
     rel="preload"
@@ -124,19 +124,25 @@
         <a class="main-nav-link" href="/tonyma.github.io/friend">友链</a>
       </span><a id="main-nav-toggle" class="nav-icon"></a>
   </nav>
-  <nav id="sub-nav"><a id="nav-rss-link" class="nav-icon" href="/tonyma.github.io/categories/index.xml" title="RSS 订阅" target="_blank"></a></nav></div>
-<header id="header"><picture></picture><img  fetchpriority="high" src="/tonyma.github.io/images/banner.webp" alt="Categories"><div id="header-outer">
+  <nav id="sub-nav"></nav></div>
+<header id="header"><picture></picture><img  fetchpriority="high" src="/tonyma.github.io/images/banner.webp" alt="常用arm汇编"><div id="header-outer">
     <div id="header-title"><a href="/tonyma.github.io/" id="logo">
-            <h1 data-aos="slide-up">目录</h1>
+            <h1 data-aos="slide-up">常用arm汇编</h1>
           </a><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
   </div>
 </header><div id="content"
           
-          class="sidebar-right"  ><aside id="sidebar"><div class="sidebar-wrapper ">
+          class="sidebar-right"  ><aside id="sidebar"><div class="sidebar-wrapper wrap-sticky">
     <div
       class="sidebar-wrap"
       data-aos="fade-up"
-    ><div class="sidebar-author">
+    ><div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div></div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img
     data-src="/tonyma.github.io/avatar/avatar.webp"
     data-sizes="auto"
@@ -195,34 +201,83 @@
       <div class='sidebar-menu-icon icon rotate'>&#xe62b;</div>
       <div class="sidebar-menu-link">友链</div>
     </div></div>
-</div>
+</div><div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div></div>
   </div>
 
-  <div class="sidebar-widget"><div class="widget-wrapper">
-    <div
-      class="widget-wrap"
-      data-aos="fade-up"
-    >
-      <h3 class="widget-title">最新文章</h3>
-      <div class="widget">
-        <ul><li>
-              <a href="/tonyma.github.io/post/huibian/">常用arm汇编</a>
-            </li><li>
-              <a href="/tonyma.github.io/post/stack/">我的栈为什么又溢出了</a>
-            </li></ul>
-      </div>
-    </div>
-  </div></div></aside>
-<section id="main"><div
-    class="archives-outer-wrap"
+  <div class="sidebar-widget"></div></aside>
+<section id="main"><article
+  class="h-entry article"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <div
+    class="article-inner"
     data-aos="fade-up"
   >
-    <div
-      class="
-        category-wrap
-      "
-    ></div>
-  </div></section>
+    <div class="article-meta"><div class="article-date">
+  <span
+    class="article-date-link"
+    data-aos="zoom-in"
+  >
+    <time datetime="2024-08-15 11:00:00 -0700 -0700" itemprop="datePublished"
+      >2024-08-15</time
+    >
+    <time style="display: none;" id="post-update-time"
+      >2024-08-15</time
+    >
+  </span>
+</div>
+<div class="article-category"></div>
+</div>
+    <div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><p>1.mov	r0, r5         即move 把r5寄存器中的值复制到r0
+2.add	r2, r3, #31    即add r3加上立即数31存到r2
+3.sub	sp, sp, #36	;   sp-立即数36 存到sp
+4.push	{r4, r5, r6, r7, r8, r9, sl, fp, lr}  push即压栈，把以下寄存器值压入堆栈
+5.ldr	r1, [pc, #1248]  即load   pc地址+立即数1248地址数据存到r1
+6.str	r1, [sp, #16]    即store  把r1值存到 sp+立即数16处 与ldr相反，还有变种比如strne，即store not empty 地址非空才str，ldrne同理
+这里解释下[]是为了取地址，arm架构中的内存地址到cpu移动只能由l/s来操作，mov和ldr的区别也就在此，mov通常是用于寄存器间传递数据或者读立即数，而ldr是从内存中读取
+7.bic	r3, r3, #8128	;  即bit clear  立即数8128一般为掩码，第一个参数为dest 即把r3与8128按位清0 然后存到r3
+8.cmp	r3, #0           即compare 比较r3值与立即数0 (实际是减法) 一般用于条件或循环控制，会根据结果设置CCR,即条件码寄存器。注在CPSR寄存器中
+9.movge	r2, r3         即mov greater or equal 只有r3值大于r2时 才会r3值移到r2
+10.and	r3, r3, #31    即bit and  把r3中的值和立即数31(十六进制)按位与 ，然后把结果存到r3
+11.asr	r2, r2, #5     即算术shift right 把r2中的值右移五位，在存到r2 ，asl同理
+12.lsr	r3, r2, r3     即逻辑Logic shift right 把r2的值逻辑右移r3中位数，然后放到r3中，lsl同理
+13.tst	r3, #1         即test  把r3与1按位与，但不保存结果，只根据结果设置CCR
+14.beq	2d50 &lt;rcu_process_callbacks+0x4e8&gt; 即branch if equal 如果相等则跳转到地址 2d50 这里，这里编译器帮忙指出了实际函数偏移，这个指令实际依赖CCR的条件寄存器的值，比如tst的结果，或者是cmp的结果
+同理bnq就是 branch if not equal
+15.movw	r1, #2835     即 move word 把2835的低16位移到r1里
+16.ldrb	r3, [r4, #14]  即load byte 只加载[r4+14]地址的一个字节的数据到r3寄存器中
+17.bl	2014 &lt;note_gp_changes&gt; 即branch and link 在跳转的前会将返回地址,也就是当前的pc值存到lr中，然后在跳转，相应的b 2014 则是无条件直接跳转
+18.clz	r2, r2         即count leading zero 计算前导0的数量，也就是计算r2中最高位到第一个不是0的位数，然后存到r2中
+19.mrc	15, 0, r4, cr13, cr0, {4}
+这段代码是 ARM 架构汇编中的一条指令。它是 MRC（Move to Register from Coprocessor）指令的一种形式，用于从协处理器中将数据移动到通用寄存器中（仅了解）
+具体来说：
+15 表示协处理器编号，对于 ARM 处理器，通常用于访问 CP15，即系统控制寄存器。
+0 是操作码，表示一个特定的功能。
+r4 是目标寄存器，即数据将被移动到的寄存器。
+cr13 表示协处理器寄存器的扩展名称。
+cr0 是协处理器寄存器组的索引。
+{4} 是可选的操作数列表，这里表示从协处理器中读取的数据应该写入目标寄存器 r4 中的第 4 个字。
+这条指令的具体含义和操作是依赖于具体的处理器和上下文的，因为不同的 ARM 处理器和操作系统可能会使用不同的寄存器和功能。</p>
+</div>
+    <footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"></ul>
+</footer>
+  </div><nav
+    id="article-nav"
+    data-aos="fade-up"
+  ><div class="article-nav-link-wrap article-nav-link-left"><img
+              data-src="https://d-sketon.top/img/_backwebp/bg1.webp"
+              data-sizes="auto"
+              alt="我的栈为什么又溢出了"
+              class="lazyload"
+            /><a href="/tonyma.github.io/post/stack/"></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">我的栈为什么又溢出了</h3>
+      </div></nav></article></section>
         </div><footer id="footer">
   <div style="width: 100%; overflow: hidden">
     <div class="footer-line"></div>
@@ -267,7 +322,13 @@
             <div class="arrow-up"></div>
           </div><div id="mask" class="hide"></div>
       </div><nav id="mobile-nav">
-  <div class="sidebar-wrap"><div class="sidebar-author">
+  <div class="sidebar-wrap"><div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div></div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img
     data-src="/tonyma.github.io/avatar/avatar.webp"
     data-sizes="auto"
@@ -326,7 +387,10 @@
       <div class='sidebar-menu-icon icon rotate'>&#xe62b;</div>
       <div class="sidebar-menu-link">友链</div>
     </div></div>
-</div></nav>
+</div></div><div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div></nav>
 </div><script
     src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"
     integrity="sha384-3gT/vsepWkfz/ff7PpWNUeMzeWoH3cDhm/A8jM7ouoAK0/fP/9bcHHR5kHq2nf&#43;e" crossorigin="anonymous"></script><script
@@ -360,9 +424,9 @@
   <div><script data-pjax>
         window.REIMU_POST = {
           author: "Tonyma",
-          title: "Categories",
-          url: "https:\/\/tonyma6324.github.io\/tonyma.github.io\/categories\/",
-          description: "",
+          title: "常用arm汇编",
+          url: "https:\/\/tonyma6324.github.io\/tonyma.github.io\/post\/huibian\/",
+          description: "1.mov\tr0, r5 即move 把r5寄存器中的值复制到r0 2.add\tr2, r3, #31 即add r3加上立即数31存到r2 3.sub\tsp, sp, #36\t; sp-立即数36 存到sp 4.push\t{r4, r5, r6, r7, r8, r9, sl, fp, lr} push即压栈，把以下寄存器值压入堆栈 5.ldr\tr1, [pc, #1248] 即load pc地址\u002b立即数1248地址数据存到r1 6.str\tr1, [sp, #16] 即store 把r1值存到 sp\u002b立即数16处 与ldr相反，还有变种比如strne，即store not empty 地址 …",
           cover: "https:\/\/tonyma6324.github.io\/tonyma.github.io\/images\/banner.webp",
         };
       </script><script src="/tonyma.github.io/js/insert_highlight.js" integrity="" crossorigin="anonymous" data-pjax></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const pswp = () => {
